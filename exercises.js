@@ -20,26 +20,25 @@
 // - A GPA of 3.6 prints "Student is in good standing with magna cum laude".
 
 function goodStandingChecker (gpa) {
-  if (gpa >= 3.8){
-  return("Student is in good standing with summa cum laude.")
-} else if (gpa >= 3.6){
-  return("Student is in good standing with magna cum laude.")
-} else if (gpa >= 3.4) {
-  return("Student is in good standing with cum laude.")
-} else if (gpa >= 2.0) {
-  return("Student is in good standing.")
-} else {
-  return("Student is on probation.")
+  if (gpa >= 3.8) {
+    return ('Student is in good standing with summa cum laude.')
+  } else if (gpa >= 3.6) {
+    return ('Student is in good standing with magna cum laude.')
+  } else if (gpa >= 3.4) {
+    return ('Student is in good standing with cum laude.')
+  } else if (gpa >= 2.0) {
+    return ('Student is in good standing.')
+  } else {
+    return ('Student is on probation.')
   }
 }
 
 goodStandingChecker(3.9)
 
 // 2. Loop from 0 to 99 and output the numbers that are multiples of 3. Do not use conditional statements. IE: 0, 3, 6, 9, 12, etc...
-for (var i = 0; i <= 99; i+=3){
-console.log(i)
+for (var i = 0; i <= 99; i += 3) {
+  console.log(i)
 }
-
 
 // 3. In programming, dates are calculated by counting the number of milliseconds since the epoch. The epoch was midnight January 1st, 1970. The number of milliseconds since the epoch is called a timestamp. The following JavaScript code will get the current timestamp:
 
@@ -53,9 +52,9 @@ console.log(i)
 
 function timeStamp () {
   for (var i = new Date().valueOf(); ; i++) {
-  console.log(i)
-  if ((i % 100 === 0)) {
-    break
+    console.log(i)
+    if ((i % 100 === 0)) {
+      break
     }
   }
 }
@@ -75,7 +74,6 @@ timeStamp()
 // 1. Write out pseudocode that describes the process you would need to go through to complete this requirement.
 // 2. Translate the pseudocode into real JavaScript that accomplishes the requirement.
 
-
 /*
 pseudocode:
 1. I need to creat a loop that goes from 0 to 2020.
@@ -83,27 +81,25 @@ pseudocode:
 3. Lastly I will print out the year and if it is a leap year or not. */
 
 for (var i = 0; i <= 2020; i++) {
-    if (i % 4 === 0 && i % 100 !== 0) {
+  if (i % 4 === 0 && i % 100 !== 0) {
     console.log(i + ' It is a Leap Year!')
   } else if (i % 4 === 0 && i % 100 === 0 && i % 400 === 0) {
     console.log(i + ' It is a Leap Year!')
   } else {
-    console.log(i + " It is not a Leap Year.")
-    }
+    console.log(i + ' It is not a Leap Year.')
   }
-
+}
 
 // 5. A result variable has been declared for you, as well as a function named half. Call the half function with the number 100 and store the result in the result variable.
 
-  var result;
+var result
 
-  function half(number){
-    return number / 2;
-  }
+function half (number) {
+  return number / 2
+}
 
-  var result = half(100)
-  console.log(result)
-  
+var result = half(100)
+console.log(result)
 
 // 6.Define a function called difference, with two parameters, that returns the difference between two values.
 // define the function here
@@ -112,5 +108,5 @@ function difference (num1, num2) {
   return num1 - num2
 }
 
-var result = difference(385, 142);
-console.log(result);
+var result = difference(385, 142)
+console.log(result)
